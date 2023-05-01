@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout...') {
               steps {
-                  git url: 'https://github.com/adeoyede/devops-code-challenge.git'
+                  git url: 'https://github.com/adeoyedewale/devops-code-challenge.git'
               }
          }
       
