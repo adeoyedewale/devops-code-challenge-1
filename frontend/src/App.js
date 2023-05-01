@@ -11,7 +11,7 @@ function App() {
       try {
         const resp = await fetch(API_URL)
         const json = await resp.json();
-        setSuccessMessage('SUCCESS: ${json.id}');
+        setSuccessMessage('SUCCESS:' ${json.id});
       }
       catch(e) {
         setFailureMessage(e.message)
