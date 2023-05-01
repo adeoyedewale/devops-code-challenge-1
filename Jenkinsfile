@@ -32,12 +32,12 @@ pipeline {
               sh '''
               aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/c6p1p1z3
         
-              docker tag projectlightfeather-frontend:$BUILD_NUMBER public.ecr.aws/c6p1p1z3/proj-frontend:$BUILD_NUMBER
+              docker tag projectlightfeather-frontend:$BUILD_NUMBER public.ecr.aws/c6p1p1z3/reviewclass-frontend:$BUILD_NUMBER
               
-              docker push public.ecr.aws/c6p1p1z3/proj-frontend:$BUILD_NUMBER
+              docker push public.ecr.aws/c6p1p1z3/reviewclass-frontend:$BUILD_NUMBER
               
-              docker tag projectlightfeather-backend:$BUILD_NUMBER public.ecr.aws/c6p1p1z3/proj-backend:$BUILD_NUMBER
-              docker push public.ecr.aws/c6p1p1z3/proj-backend:$BUILD_NUMBER
+              docker tag projectlightfeather-backend:$BUILD_NUMBER public.ecr.aws/c6p1p1z3/reviewclass-backend:$BUILD_NUMBER
+              docker push public.ecr.aws/c6p1p1z3/reviewclass-backend:$BUILD_NUMBER
               '''
             }
           } 
