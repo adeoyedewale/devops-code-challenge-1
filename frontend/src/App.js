@@ -11,7 +11,7 @@ function App() {
       try {
         const resp = await fetch(API_URL)
         const json = await resp.json();
-        setSuccessMessage('SUCCESS:' ${json.id});
+        setSuccessMessage(${json.id});
       }
       catch(e) {
         setFailureMessage(e.message)
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       {!failureMessage && !successMessage ? 'Fetching...' : null}
       {failureMessage ? failureMessage : null}
-      {successMessage ? successMessage : null}
+      {successMessage ? 'SUCCESS...' : null}
     </div>
   );
 }
